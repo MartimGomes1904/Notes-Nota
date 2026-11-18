@@ -6,11 +6,11 @@
   "publisher": "MartimGomes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MartimGomes1904/To-do-Td.git"
+    "url": "https://github.com/MartimGomes1904/Notes-Nota.git"
   },
-  "homepage": "https://github.com/MartimGomes1904/To-do-Td",
+  "homepage": "https://github.com/MartimGomes1904Notes-Nota",
   "bugs": {
-    "url": "https://github.com/MartimGomes1904/To-do-Td/issues"
+    "url": "https://github.com/MartimGomes1904/Notes-Nota/issues"
   },
   "license": "MIT",
   "icon": "icons/icon.png",
