@@ -1,0 +1,10 @@
+{
+  "displayName": "Gomes Notes",
+  "description": "Visual notebook for notes: cards or list, Markdown with preview, colors, labels, pinning and archive. English and Portuguese.",
+  "container.title": "Notes",
+  "view.name": "Notebooks",
+  "cmd.newFile": "Notes: New notebook",
+  "cmd.openAsText": "Notes: Open as text (JSON)",
+  "cmd.releaseNotes": "Notes: Show release notes",
+  "cfg.showReleaseNotes": "Show the release notes page after the extension is updated."
+}

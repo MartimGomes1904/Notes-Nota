@@ -1,0 +1,9 @@
+{
+  "scopeName": "source.nota",
+  "name": "Notes",
+  "patterns": [
+    {
+      "include": "source.json"
+    }
+  ]
+}

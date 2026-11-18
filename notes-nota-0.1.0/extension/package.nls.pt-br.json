@@ -1,0 +1,10 @@
+{
+  "displayName": "Gomes Notes",
+  "description": "Caderno visual de anotações: cartões ou lista, Markdown com pré-visualização, cores, etiquetas, fixar e arquivo. Português e inglês.",
+  "container.title": "Notas",
+  "view.name": "Cadernos",
+  "cmd.newFile": "Notas: Novo caderno",
+  "cmd.openAsText": "Notas: Abrir como texto (JSON)",
+  "cmd.releaseNotes": "Notas: Mostrar notas de versão",
+  "cfg.showReleaseNotes": "Mostrar a página de notas de versão depois que a extensão for atualizada."
+}

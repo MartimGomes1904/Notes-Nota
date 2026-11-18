@@ -1,0 +1,93 @@
+{
+  "name": "notes-nota",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.1.0",
+  "publisher": "MartimGomes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartimGomes1904/To-do-Td.git"
+  },
+  "homepage": "https://github.com/MartimGomes1904/To-do-Td",
+  "bugs": {
+    "url": "https://github.com/MartimGomes1904/To-do-Td/issues"
+  },
+  "license": "MIT",
+  "icon": "icons/icon.png",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Notebooks", "Other"],
+  "keywords": ["notes", "notebook", "memo", "markdown", "sticky notes"],
+  "main": "./extension.js",
+  "activationEvents": ["workspaceContains:**/*.nota", "onStartupFinished"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "nota",
+        "aliases": ["Notes", "nota"],
+        "extensions": [".nota"],
+        "icon": { "light": "./icons/nota.svg", "dark": "./icons/nota.svg" }
+      }
+    ],
+    "grammars": [
+      { "language": "nota", "scopeName": "source.nota", "path": "./syntaxes/nota.tmLanguage.json" }
+    ],
+    "customEditors": [
+      {
+        "viewType": "gomesNotes.editor",
+        "displayName": "%displayName%",
+        "selector": [{ "filenamePattern": "*.nota" }],
+        "priority": "default"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "gomesNotes", "title": "%container.title%", "icon": "icons/activitybar.svg" }
+      ]
+    },
+    "views": {
+      "gomesNotes": [{ "id": "gomesNotes.files", "name": "%view.name%", "icon": "icons/activitybar.svg" }]
+    },
+    "viewsWelcome": [
+      {
+        "view": "gomesNotes.files",
+        "contents": "Não tens nenhum caderno de notas criado.\n[Criar caderno](command:gomesNotes.newFile)",
+        "when": "gomesNotes.noFiles && workspaceFolderCount > 0 && gomesNotes.lang == 'pt'"
+      },
+      {
+        "view": "gomesNotes.files",
+        "contents": "You don't have any notebook yet.\n[Create notebook](command:gomesNotes.newFile)",
+        "when": "gomesNotes.noFiles && workspaceFolderCount > 0 && gomesNotes.lang != 'pt'"
+      },
+      {
+        "view": "gomesNotes.files",
+        "contents": "Abre uma pasta para começares a escrever notas.\n[Abrir pasta](command:workbench.action.files.openFolder)",
+        "when": "workspaceFolderCount == 0 && gomesNotes.lang == 'pt'"
+      },
+      {
+        "view": "gomesNotes.files",
+        "contents": "Open a folder to start writing notes.\n[Open Folder](command:workbench.action.files.openFolder)",
+        "when": "workspaceFolderCount == 0 && gomesNotes.lang != 'pt'"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        { "command": "gomesNotes.newFile", "when": "view == gomesNotes.files", "group": "navigation" }
+      ]
+    },
+    "commands": [
+      { "command": "gomesNotes.newFile", "title": "%cmd.newFile%", "icon": "$(add)" },
+      { "command": "gomesNotes.openAsText", "title": "%cmd.openAsText%" },
+      { "command": "gomesNotes.showReleaseNotes", "title": "%cmd.releaseNotes%" }
+    ],
+    "configuration": {
+      "title": "Gomes Notes",
+      "properties": {
+        "gomesNotes.showReleaseNotes": {
+          "type": "boolean",
+          "default": true,
+          "description": "%cfg.showReleaseNotes%"
+        }
+      }
+    }
+  }
+}
